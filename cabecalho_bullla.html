@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cabeçalho Bullla | Gestão de Requisições</title>
+    
+    <!-- Fonte Oficial: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        azulLegado: '#131833',
+                        azulFuturo: '#2C67FF',
+                        azulHorizonte: '#2CA4FF',
+                        cinzaAberto: '#EEF3FF',
+                        coral: '#F77560',
+                    },
+                    borderRadius: {
+                        'cylindrical': '2rem',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Estilo para simular um "Card de Imagem" perfeito para screenshot ou embed */
+        .header-container {
+            width: 1230px;     /* Largura exata solicitada */
+            height: 330px;     /* Altura exata solicitada */
+            position: relative;
+            overflow: hidden;
+            background-color: #131833; /* Fallback color */
+            display: flex;
+            align-items: center;
+            border-radius: 0 0 4rem 0; /* Identidade visual Bullla (Canto arredondado) */
+            flex-shrink: 0;    /* Garante que não encolha em telas menores no modo preview */
+        }
+
+        /* Background Abstrato Gerado via CSS (Formas Cilíndricas da Marca) */
+        .bg-shape-1 {
+            position: absolute;
+            top: -20%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, #2C67FF 0%, rgba(44, 103, 255, 0) 70%);
+            opacity: 0.4;
+            border-radius: 50%;
+            filter: blur(60px);
+        }
+        
+        .bg-shape-2 {
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, #2CA4FF 0%, rgba(44, 164, 255, 0) 70%);
+            opacity: 0.3;
+            border-radius: 50%;
+            filter: blur(50px);
+        }
+
+        .bg-shape-3 {
+            position: absolute;
+            top: 20%;
+            right: 20%;
+            width: 150px;
+            height: 150px;
+            background: #F77560;
+            opacity: 0.15;
+            border-radius: 50%;
+            filter: blur(40px);
+        }
+
+        /* Padrão de Grid sutil (Opcional, mas técnico) */
+        .grid-overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen p-8 overflow-auto">
+
+    <!-- Este é o bloco visual para ser usado como Cabeçalho -->
+    <div class="header-container shadow-2xl relative">
+        
+        <!-- Elementos de Fundo (Identidade Visual) -->
+        <div class="bg-shape-1"></div>
+        <div class="bg-shape-2"></div>
+        <div class="bg-shape-3"></div>
+        <div class="grid-overlay"></div>
+
+        <!-- Conteúdo do Cabeçalho -->
+        <div class="relative z-10 px-12 md:px-20 w-full max-w-4xl">
+
+            <!-- Título Principal -->
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
+                Gestão de <br>
+                <span class="text-azulHorizonte">Requisições</span>
+            </h1>
+
+            <!-- Descrição -->
+            <p class="text-base text-cinzaAberto/90 max-w-2xl font-light leading-relaxed">
+                Portal dedicado para a abertura de requisições de compras, acompanhamento de pedidos e lançamento de medições.
+            </p>
+
+            <!-- Botão Visual (Opcional, apenas para compor a imagem) -->
+            <div class="mt-6 flex items-center gap-4">
+                <div class="h-1 w-12 bg-coral rounded-full"></div>
+                <span class="text-white/60 text-sm italic">Simplificando o seu dia a dia.</span>
+            </div>
+        </div>
+
+        <!-- Logo Bullla (Canto Superior Direito) -->
+        <div class="absolute top-8 right-8 md:top-12 md:right-12 opacity-90">
+            <img src="https://i.ibb.co/W4ZCpHzb/logo-bullla.png" alt="Logo Bullla" class="h-12 w-auto">
+        </div>
+
+    </div>
+
+</body>
+</html>
